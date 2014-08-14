@@ -1,0 +1,7 @@
+{
+  "name": "start-express-http",
+  "version": "0.0.0-pre1",
+  "description": "A HTTP listener helper for Express.js",
+  "main": "index.js",
+  "license": "ISC"
+}
