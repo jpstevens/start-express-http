@@ -1,11 +1,18 @@
 {
   "name": "start-express-http",
-  "version": "0.0.0-pre1",
+  "version": "0.1.0",
   "description": "A HTTP listener helper for Express.js",
   "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha tests/**/*-spec.js"
+  },
   "license": "ISC",
   "dependencies": {
     "q": "^1.0.1",
     "chalk": "^0.5.1"
+  },
+  "devDependencies": {
+    "express": "^4.9.3",
+    "mocha": "^1.21.4"
   }
 }
