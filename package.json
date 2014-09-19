@@ -6,10 +6,15 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha tests/**/*-spec.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jpstevens/start-express-http.git"
+  },
   "license": "ISC",
   "dependencies": {
     "q": "^1.0.1",
-    "chalk": "^0.5.1"
+    "chalk": "^0.5.1",
+    "trycatch": "^1.5.11"
   },
   "devDependencies": {
     "express": "^4.9.3",
