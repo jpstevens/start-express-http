@@ -1,7 +1,8 @@
 (function(exports) {
   var chalk = require('chalk'),
       q = require('q'),
-      trycatch = require('trycatch');
+      trycatch = require('trycatch'),
+      DEFAULT_PORT = 3000;
 
   function hideLogs () {
     switch(process.env.HIDE_SE_LOG) {
@@ -32,13 +33,13 @@
   }
 
   exports.start = function(app) {
-    var port = app.get('port') || app.get('PORT') || process.env.PORT || 3000,
+    var port = app.get('port') || app.get('PORT') || process.env.PORT || DEFAULT_PORT,
         deferred = q.defer(),
         httpServer;
     trycatch(function(){
       httpServer = app.listen(port, function(){
-        logSuccess(httpServer);
-        deferred.resolve(server);
+        logSuccess(port);
+        deferred.resolve(httpServer);
       });
     }, function(err) {
       logError(port);

@@ -65,6 +65,20 @@ describe('#start', function(){
 
     });
 
+    describe('when port is undefined', function(){
+
+      beforeEach(function(){
+        this.promise = startExpressHTTP.start(this.app);
+      });
+
+      it('resolves the promise, and starts app on the default port', function(done){
+        this.promise.then(function(){
+          done();
+        });
+      });
+
+    });
+
   });
 
   describe('failing to start app on a port', function(){

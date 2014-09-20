@@ -17,9 +17,11 @@ var app = require('express')();
 // method #1
 app.set('PORT', 3000);
 // method #2
-process.env.PORT = 3000;
-// method #3 (bonus)
 app.set('port', 3000);
+// method #3
+process.env.PORT = 3000;
+// method #4 - do nothing
+// default port is 3000
 
 // start HTTP server
 require('start-express-http').start(app)
