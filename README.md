@@ -1,7 +1,7 @@
 # start-express-http
 [![Build Status](https://travis-ci.org/jpstevens/start-express-http.svg?branch=master)](https://travis-ci.org/jpstevens/start-express-http)
 
-A Mongoose boot helper for Express.js
+A HTTP listener helper for Express.js
 
 ## Installation
 
