@@ -100,9 +100,13 @@ describe('#start', function(){
 
     describe('when port is in use', function(){
 
-      beforeEach(function(){
-        process.env.PORT = 80;
-        this.promise = startExpressHTTP.start(this.app);
+      beforeEach(function(done){
+        process.env.PORT = 9999;
+        var secondApp = express();
+        startExpressHTTP.start(this.app).then(function(){
+          this.promise = startExpressHTTP.start(secondApp);
+          done();
+        }.bind(this));
       });
 
       it('rejects the promise', function(done){
