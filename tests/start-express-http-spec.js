@@ -83,21 +83,6 @@ describe('#start', function(){
 
   describe('failing to start app on a port', function(){
 
-    describe('when port is invalid', function(){
-
-      beforeEach(function(){
-        process.env.PORT = 'invalid_port';
-        this.promise = startExpressHTTP.start(this.app);
-      });
-
-      it('rejects the promise', function(done){
-        this.promise.fail(function(err){
-          done();
-        });
-      });
-
-    });
-
     describe('when port is in use', function(){
 
       beforeEach(function(done){
