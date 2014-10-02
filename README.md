@@ -1,5 +1,6 @@
 # start-express-http
 [![Build Status](https://travis-ci.org/jpstevens/start-express-http.svg?branch=master)](https://travis-ci.org/jpstevens/start-express-http)
+![Downloads/month](http://img.shields.io/npm/dm/start-express-http.svg)
 
 A HTTP listener helper for Express.js
 
