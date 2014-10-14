@@ -1,4 +1,5 @@
 (function(exports) {
+
   var chalk = require('chalk'),
       q = require('q'),
       trycatch = require('trycatch'),
@@ -42,8 +43,14 @@
         deferred.resolve(httpServer);
       });
     }, function(err) {
-      logError(port);
-      deferred.reject(err);
+      var util = require('util');
+      if(err.code === 'EADDRINUSE') {
+        // handle port in use
+        logError(port);
+        deferred.reject(err);
+      } else {
+        throw(err);
+      }
     });
     return deferred.promise;
   };
