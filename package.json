@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "q": "^1.0.1",
-    "chalk": "^0.5.1",
+    "chalk": "^1.0.0",
     "trycatch": "^1.5.11"
   },
   "devDependencies": {
